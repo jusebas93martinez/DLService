@@ -1,0 +1,99 @@
+/* Contenedor principal de cada servicio */
+.servicio-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ); /* Fondo blanco semitransparente */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+  margin-bottom: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de flotación al pasar el mouse */
+.servicio-contenedor:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0); /* Sombra más intensa */
+}
+
+/* Contenedor del texto */
+.servicio-texto {
+  flex: 1;
+  padding-right: 2rem;
+  text-align: left;
+  color: #333;
+}
+
+/* Contenedor de la imagen */
+.servicio-imagen {
+  flex: 0 0 35%;
+  text-align: right;
+}
+
+.servicio-imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.servicio-imagen img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para el título de cada servicio */
+.servicio-texto h3 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Ajustes para el párrafo de cada servicio */
+.servicio-texto p {
+  color: #000000;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* General styles for h2 title */
+#servicios h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+
+  /* Animación */
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(30px); /* Inicialmente desplazado hacia abajo */
+  animation: fadeInUp 1s ease-out forwards; /* Aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Comienza desde abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
