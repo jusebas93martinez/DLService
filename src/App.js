@@ -1,16 +1,16 @@
-import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
+
 import Header from "./components/Header";
 import Servicios from "./components/Servicios";
 import Nosotros from "./components/Nosotros";
 import Contactenos from "./components/Contactenos";
 import "./App.css"; // Asegúrate de que App.css esté cargado
-import "./components/Servicios.css";
+import "./components/Servicios.css"; // Estilos de Servicios
 
 function App() {
   return (
